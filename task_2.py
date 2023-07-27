@@ -4,15 +4,16 @@
 # если делится нацело только на единицу и на себя”.
 # Сделайте ограничение на ввод отрицательных чисел и чисел больше 100 тысяч.
 
-number = 99999
+number = 55
 START = 2
 STOP = number
+MIN_BORDER = 0
+MAX_BORDER = 100000
 count = 0
-min_border = 0
-max_border = 100000
-if number < min_border or number > max_border:
-    print('Введите число от 1 до 100 000')
-if number == 1 or number == 0:
+
+if number < MIN_BORDER or number > MAX_BORDER:
+    print('Введите число от 0 до 100 000')
+elif number == 1 or number == 0:
     print('Числа 0 и 1 не являются ни простым, ни сложным')
 else:
     for num in range(START, STOP):
